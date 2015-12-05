@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="media_player_project.Media_player_interfaceController">
+   <top>
+      <MenuBar fx:id="menuBar" prefHeight="10.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="open_menu" mnemonicParsing="false" onAction="#open_menu_action" text="  Open..." />
+                  <MenuItem fx:id="playlist_menu" mnemonicParsing="false" onAction="#playlist_menu_action" text="  Make Playlist..." />
+              <MenuItem mnemonicParsing="false" text="  Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <Glow />
+         </effect>
+      </MenuBar>
+   </top>
+   <center>
+      <MediaView fx:id="mediaView" fitHeight="430.0" fitWidth="620.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></MediaView>
+   </center>
+   <bottom>
+      <HBox fx:id="controlPanel" prefHeight="57.0" prefWidth="604.0" style="-fx-background-color: #576465;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backwordButton" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="play" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#playButtonAction" prefHeight="30.0" prefWidth="30.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="forwardButton" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="stopButton" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="timeLabel" prefHeight="20.0" prefWidth="32.0" text="00.00">
+               <HBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Slider fx:id="timeSlider" prefHeight="14.0" prefWidth="261.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" top="16.0" />
+               </HBox.margin>
+            </Slider>
+            <ToggleButton fx:id="muteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ToggleButton>
+            <Slider fx:id="volumeSlider" prefHeight="14.0" prefWidth="106.0">
+               <HBox.margin>
+                  <Insets left="15.0" top="15.0" />
+               </HBox.margin>
+            </Slider>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
